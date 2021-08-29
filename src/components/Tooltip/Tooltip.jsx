@@ -59,7 +59,7 @@ const getStyle = (tooltipPosition, anchorDimensions, tooltipDimensions, windowDi
         }
 
     //lol this bit is horrible
-    const key = tooltipPosition + (pointerPosition === 'center' ? '' : (pointerPosition.charAt(0).toUpperCase() + pointerPosition.slice(1) ))
+    const key = tooltipPosition + (pointerPosition === 'center' || (tooltipPosition === 'right' || tooltipPosition === 'left') ? '' : (pointerPosition.charAt(0).toUpperCase() + pointerPosition.slice(1) ))
     let style = positions[key]
 
     if(isOutsideWindow(tooltipDimensions, windowDimensions, style)) {

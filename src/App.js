@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <button ref={anchorRef}>Click me</button>
-      <Tooltip anchorRef={anchorRef} tooltipPosition="bottom" pointerPosition="start"/>
+      <Tooltip anchorRef={anchorRef} tooltipPosition="right" pointerPosition="start"/>
     </div>
   );
 }
