@@ -1,23 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Tooltip from './components/Tooltip/Tooltip'
 
 function App() {
+  const anchorRef = React.useRef();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button ref={anchorRef}>Click me</button>
+      <Tooltip anchorRef={anchorRef} tooltipPosition="bottom" pointerPosition="start"/>
     </div>
   );
 }
